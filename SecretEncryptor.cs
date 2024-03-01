@@ -10,9 +10,9 @@ namespace BDO_Perform.WebApi.Infrastructure.Secrets;
 public static class SecretEncryptor
 {
     /// <summary>
-    /// Binds the provided JSON file to the config and ensures that all Configuration Secrets are encrypted.
+    /// Ensures that all Configuration Secrets are encrypted.
     /// </summary>
-    /// <typeparam name="T">The class representing the settings to be endcrypted.</typeparam>
+    /// <typeparam name="T">The class representing the settings to be encrypted.</typeparam>
     /// <param name="physicalPath">Path to the JSON file to be encrypted.</param>
     /// <param name="sectionName">Name of the section in the JSON file to target.</param>
     public static void EncryptSecrets<T>(string physicalPath, string sectionName)
