@@ -126,7 +126,7 @@ public class ConfigurationSecret
         {
             foreach (var mo in searcher.Get())
             {
-                sb.Append(mo["ProcessorId"].ToString());
+                sb.Append(mo?["ProcessorId"]?.ToString() ?? "Win32_Processor.ProcessorId");
             }
         }
 
@@ -135,7 +135,7 @@ public class ConfigurationSecret
         {
             foreach (var mo in searcher.Get())
             {
-                sb.Append(mo["SerialNumber"].ToString());
+                sb.Append(mo?["SerialNumber"]?.ToString() ?? "Win32_BaseBoard.SerialNumber");
             }
         }
 
@@ -144,7 +144,7 @@ public class ConfigurationSecret
         {
             foreach (var mo in searcher.Get())
             {
-                sb.Append(mo["SerialNumber"].ToString());
+                sb.Append(mo?["SerialNumber"]?.ToString() ?? "Win32_PhysicalMedia.SerialNumber");
             }
         }
 
